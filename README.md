@@ -6,8 +6,8 @@ An embedded search box was created for Primo VE  which could search for fields, 
 It is a good search box you could put into LibGuides pages if you added the corresponding search scope. The default search scope is EVERYTHING.
 
 The interface will be like below.
-![Picture1](https://user-images.githubusercontent.com/20071142/201226915-bff73b94-c812-4a5a-b46e-d72d4559d46f.png)
 
+![Picture1](https://user-images.githubusercontent.com/20071142/201226915-bff73b94-c812-4a5a-b46e-d72d4559d46f.png)
 
 
 Intending to use the search box in your library environement, you have to make  some changes and customizations as follows.
