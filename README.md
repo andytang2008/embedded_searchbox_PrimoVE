@@ -12,7 +12,8 @@ The interface will be like below.
 
 Intending to use the search box in your library environement, you have to make  some changes and customizations as follows.
 
-
+![Picture2](https://user-images.githubusercontent.com/20071142/201227129-d43d92a2-f80e-43ea-94a0-a7067dfd857e.png)
+![picture3](https://user-images.githubusercontent.com/20071142/201227135-eb2655a7-92db-43a6-a19c-7bfa2372bb1a.png)
 
 
 
