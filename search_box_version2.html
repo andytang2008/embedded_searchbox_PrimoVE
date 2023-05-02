@@ -1,0 +1,45 @@
+<!--
+Andy Tang: Some modifications were made so that the embedded search box could search for the fields, such as Title, keyword, Author, Subject, ISBN, ISSN, Course name, and Call number in Primo VE environment.
+
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Script that converts the query string into valid parameter -->
+<script type="text/javascript">
+function searchPrimo() {
+document.getElementById("primoQuery").value = document.getElementById("multipleChoice").value.replace(/[,]/g, " ")+",contains," + document.getElementById("primoQueryTemp").value.replace(/[,]/g, " ");  //modified by Andy Tang at 11/10/2022
+document.forms["searchForm"].submit();
+}
+</script>
+</head>
+<body>
+<form id="simple" name="searchForm" method="get" target="_self" action="https://unlv-law.primo.exlibrisgroup.com/discovery/search" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="searchPrimo()">
+
+	<select name="search_field" id="multipleChoice"  title="Search within" >
+		<option selected="selected" value="any">Everything</option>
+		<option value="title">Title</option>
+		<option value="creator">Author/Creator</option>
+		<option value="sub">Subject</option>
+		<option value="holding_call_number">Call number</option>
+
+		<option value="isbn">ISBN</option>
+		<option value="issn">ISSN</option>
+		<option value="course_name">Course Name</option>
+    </select>
+
+
+
+<input type="hidden" name="vid" value="01UNLV_LAW:UNLV_LAW">
+<input type="hidden" name="tab" value="Everything">
+<input type="hidden" name="search_scope" value="MyInst_and_CI">
+<!-- Fixed parameters -->
+<input type="hidden" name="query" id="primoQuery">
+<input type="hidden" name="offset" value="0">
+<input type="text" id="primoQueryTemp" value="" size="35">
+<!-- Search Button -->
+<input id="go" title="Search" onclick="searchPrimo()" type="button" value="Search" alt="Search" style="height: 22px; font-size: 12px; font-weight: bold; background: #DE6E17; color: #ffffff; border: 1px solid;">
+
+</form>
+</body>
+</html>
